@@ -15,7 +15,6 @@ main.casino-page {
         justify-content: center;
 
         @include brkpnt(tablet) {
-          border:1px solid $light-grey;
           flex-wrap: nowrap;
           justify-content: flex-start;
         }
@@ -81,6 +80,12 @@ main.casino-page {
             }
           }
         }
+      }
+
+      @include brkpnt(tablet) {
+        border-right: 1px solid $light-grey;
+        padding-right: em(10);
+        align-self: stretch;
       }
     }
   }

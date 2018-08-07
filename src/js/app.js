@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", function(){
   let mainNav = document.getElementById("mainNav");
   let mainNavMobileBtn = document.querySelector(".main-nav-container .mobile-btn");
+  let readMoreBtns = document.querySelectorAll(".mobile-read-more .btn");
 
   function removeSiblingsOpen(item) {
     for (var i=0; i<item.length; i++) {
@@ -53,7 +54,21 @@ window.addEventListener("DOMContentLoaded", function(){
       removeSiblingsOpen(mainNav.children);
     }
   })
+
+  readMoreBtns.forEach(function(element, index) {
+    element.addEventListener("click", function(){
+      let elementParent = this.parentNode.parentNode;
+      elementParent.classList.toggle("show");
+      // if(elementParent.classList.contains("show")) {
+      //   element.innerHTML = "test";
+      // } else {
+      //   element.innerHTML = "tester";
+      // }
+    })
+  })
 })
+
+
 
 //Algolia Search Implementation
 var client = algoliasearch('UPT1CAPJCZ', '20b100767eda52ffbf2bfe5860295de4');

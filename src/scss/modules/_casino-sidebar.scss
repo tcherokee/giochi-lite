@@ -38,7 +38,15 @@ main.casino-page {
               margin: 0;
             }
           }
+
+          @include brkpnt(tablet) {
+            border: none;
+          }
         }
+      }
+
+      @include brkpnt(tablet) {
+        align-self: stretch;
       }
     }
   }

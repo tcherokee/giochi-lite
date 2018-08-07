@@ -16,6 +16,7 @@ main.container {
     .main-section {
       position: relative;
       flex-basis: 890px;
+      overflow: hidden;
 
       @include brkpnt(tablet) {
         margin-right: em(10);
@@ -34,5 +35,15 @@ main.container {
 
   .content-box {
     margin: 20px 0;
+  }
+
+  &.home-page {
+    & > .row {
+      .main-section {
+        .content-box {
+          @extend %mobile-read-more;
+        }
+      }
+    }
   }
 }

@@ -8,6 +8,15 @@
     }
   }
 
+  & > div:first-of-type {
+    border: none;
+
+    @include brkpnt(tablet) {
+      border: 1px solid $light-grey;
+      padding: em(10);
+    }
+  }
+
   .payment-methods {
     display: flex;
     flex-wrap: nowrap;
