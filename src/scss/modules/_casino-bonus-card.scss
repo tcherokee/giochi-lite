@@ -17,6 +17,11 @@ main.casino-page {
         @include brkpnt(tablet) {
           flex-wrap: nowrap;
           justify-content: flex-start;
+          border-bottom: 1px solid $light-grey;
+        }
+
+        @include brkpnt(custom-desktop) {
+          border: none;
         }
 
         .casino-website-bonus {
@@ -82,7 +87,65 @@ main.casino-page {
         }
       }
 
+      .testimonal-ratings {
+        padding: 0;
+
+        @include brkpnt(tablet) {
+          padding: 0 em(10);
+        }
+
+        @include brkpnt(custom-desktop) {
+          padding: 0;
+        }
+      }
+
+      .payment-methods {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: em(10);
+
+        span{
+          @extend %inline-heading;
+          margin-right: em(10);
+        }
+
+        div {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          @include brkpnt(tablet) {
+            flex-wrap: nowrap;
+          }
+
+          img {
+            width: 45px;
+            padding-right: em(5);
+            margin-bottom: em(5);
+
+            @include brkpnt(tablet) {
+              margin: 0;
+            }
+          }
+        }
+
+        @include brkpnt(tablet) {
+          margin-bottom: em(10);
+        }
+
+        @include brkpnt(custom-desktop) {
+          margin-bottom: 0;
+        }
+      }
+
       @include brkpnt(tablet) {
+        border: 1px solid $light-grey;
+      }
+
+      @include brkpnt(custom-desktop) {
+        border: none;
         border-right: 1px solid $light-grey;
         padding-right: em(10);
         align-self: stretch;

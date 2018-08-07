@@ -37,13 +37,9 @@ main.container {
     margin: 20px 0;
   }
 
-  &.home-page {
-    & > .row {
-      .main-section {
-        .content-box {
-          @extend %mobile-read-more;
-        }
-      }
-    }
+  .content-box.fader {
+    @extend %mobile-read-more;
+
+    overflow: hidden;
   }
 }

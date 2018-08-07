@@ -11,42 +11,9 @@
   & > div:first-of-type {
     border: none;
 
-    @include brkpnt(tablet) {
+    @include brkpnt(custom-desktop) {
       border: 1px solid $light-grey;
       padding: em(10);
-    }
-  }
-
-  .payment-methods {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: em(10);
-
-    span{
-      @extend %inline-heading;
-      margin-right: em(10);
-    }
-
-    div {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
-      @include brkpnt(tablet) {
-        flex-wrap: nowrap;
-      }
-
-      img {
-        width: 45px;
-        padding-right: em(5);
-        margin-bottom: em(5);
-
-        @include brkpnt(tablet) {
-          margin: 0;
-        }
-      }
     }
   }
 

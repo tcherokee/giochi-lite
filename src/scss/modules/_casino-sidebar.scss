@@ -39,7 +39,7 @@ main.casino-page {
             }
           }
 
-          @include brkpnt(tablet) {
+          @include brkpnt(custom-desktop) {
             border: none;
           }
         }

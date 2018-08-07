@@ -4,6 +4,8 @@ let stickyHeader = document.getElementById("stickyHeader");
 function showStickHeader() {
   let bottomBonusDiv = bonusDiv.getBoundingClientRect().bottom;
 
+  console.log("scrolling");
+
   // console.log(bonusDiv.getBoundingClientRect().bottom);
   // console.log(window.pageYOffset);
 
