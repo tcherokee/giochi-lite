@@ -1,0 +1,39 @@
+.pagination {
+  font-size: em(14);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @include brkpnt(tablet) {
+    justify-content: flex-end;
+  }
+
+  & > * {
+    border: 1px solid $base-color;
+    border-right-color: $white;
+
+    &:last-child {
+      border-right-color: $base-color;
+    }
+  }
+
+  a {
+    padding: em(10);
+    background: $base-color;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      background: darken($base-color, 5%);
+    }
+  }
+
+  span {
+    margin-left: em(-1);
+    padding: em(10);
+    border: 1px solid $base-color;
+    background: $white;
+    color: $base-color;
+  }
+}

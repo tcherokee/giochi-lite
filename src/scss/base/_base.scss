@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background: $body-bkg-color no-repeat;
+  line-height: 1.5;
+  font-family: $stack-open-sans;
+  color: $medium-grey;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $stack-raleway;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 5px 0;
+  text-align: center;
+  line-height: 1.3;
+
+  @include brkpnt(tablet) {
+    text-align: left;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  color: $base-color;
+
+  @include brkpnt(tablet) {
+    font-size: 32px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 em(10);
+  background: $white;
+
+  @include brkpnt(tablet) {
+    flex-wrap: wrap;
+  }
+}
+
+a {
+  color: $alternate-color;
+}
+
+.img-r {
+	display: block;
+	max-width: 100%;
+}
+
+.btn {
+	display: inline-block;
+	padding: em(10) em(15);
+	margin: em(20) 0;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+}

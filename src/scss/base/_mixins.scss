@@ -1,0 +1,66 @@
+@mixin brkpnt($device) {
+  @if $device == phone {
+    @media #{$brk-point-small} {
+      @content;
+    }
+  }
+
+  @if $device == custom-tablet {
+    @media #{$brk-point-custom-small} {
+      @content;
+    }
+  }
+
+  @else if $device == tablet {
+    @media #{$brk-point-medium} {
+      @content;
+    }
+  }
+
+  @else if $device == custom-desktop {
+    @media #{$brk-point-custom-medium} {
+      @content;
+    }
+  }
+
+  @else if $device == desktop {
+    @media #{$brk-point-large} {
+      @content;
+    }
+  }
+}
+
+@mixin btnstyle($bg, $radius, $color) {
+  background: $bg;
+  border: 1px solid darken($bg, 10%);
+  border-radius: $radius;
+  color:$color;
+
+  &:hover {
+    background: darken($bg, 10%);
+    transition: all 0.3s ease;
+    color:$color;
+  }
+
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+
+@mixin responsive-block ($float, $width, $brkpoint: tablet) {
+  float:none;
+  width: 100%;
+
+  & > * {
+    @if $float == "right" {
+      margin-left: em(5);
+    } @else {
+      margin-right: em(5);
+    }
+  }
+
+  @include brkpnt($brkpoint){
+    float:$float;
+    width: $width;
+  }
+}

@@ -1,0 +1,38 @@
+.sticky-header {
+  display: none;
+
+  @include brkpnt(tablet) {
+    position:fixed;
+    width: 100%;
+    z-index: 2;
+    background: $white;
+    border-bottom: 1px solid $light-grey;
+
+    &.visible {
+      display: block;
+      animation: fadein 1s;
+    }
+
+    .sticky {
+      display: flex;
+      justify-content: space-between;
+
+      figure {
+        max-width: 250px;
+      }
+
+      .bonus {
+        padding: 10px;
+        align-self: center;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      .btn {
+        display: flex;
+        margin: 0;
+        align-items: center;
+      }
+    }
+  }
+}

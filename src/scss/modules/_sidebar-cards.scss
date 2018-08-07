@@ -1,0 +1,51 @@
+.sidebar-section {
+
+  & > * {
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    @include brkpnt(custom-desktop) {
+      margin-right: 0;
+    }
+  }
+
+  .card {
+    border: 1px solid $light-grey;
+    width: 250px;
+
+    h4 {
+      position: relative;
+      margin: 10px 10px 0;
+      padding-left: 25px;
+      color: $base-color;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: url("../images/rating-100.svg");
+        height: 20px;
+        width: 20px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    ul {
+      @extend %ul-no-bullets;
+      margin-top: 15px;
+
+      li {
+        @extend %tick-lists;;
+      }
+    }
+
+    .btns {
+      display: flex;
+
+      a {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}

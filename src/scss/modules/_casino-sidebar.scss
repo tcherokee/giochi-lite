@@ -1,0 +1,45 @@
+main.casino-page {
+  .row {
+    .sidebar-section {
+      max-width: em(350);
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        margin-top: em(20);
+
+        @include brkpnt(custom-desktop) {
+          margin-top: 0;
+        }
+
+        .casino-info {
+          @extend %ul-no-bullets;
+
+          display: flex;
+          flex-direction: column;
+          border: 1px solid $light-grey;
+          padding: 10px;
+          justify-content: space-around;
+
+          li {
+            padding: em(10) 0;
+
+            span {
+              @extend %inline-heading;
+
+              color: $base-color;
+              font-size: 16px;
+              margin-right: 10px;
+            }
+
+            p {
+              display: inline;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

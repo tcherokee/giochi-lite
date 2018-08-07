@@ -1,0 +1,35 @@
+$white: #fff;
+$black: #000;
+
+$light-grey: #CCCCCC;
+$medium-grey: #546E7A;
+$dark-grey: #263238;
+$red: #F44336;
+$yellow: #FFDD40;
+
+$base-color: #EF6C00; /* Orange */
+$alternate-color: #009688; /* Green */
+$tertiary-color: #00BCD4; /* Teal */
+$misc-color: #01579B; /* Dark Blue */
+
+/* Background */
+$body-bkg-color: linear-gradient($misc-color, $white);
+
+/*
+  Font Stacks
+*/
+
+$stack-sans-serif: Helvetica, Arial, sans-serif;
+$stack-open-sans: 'Roboto', $stack-sans-serif;
+$stack-raleway: 'Raleway', $stack-sans-serif;
+
+
+/*
+  Breakpoints
+*/
+
+$brk-point-small:   'screen and (min-width: ' + em(320) + ')';
+$brk-point-custom-small:   'screen and (min-width: ' + em(498) + ')';
+$brk-point-medium:  'screen and (min-width: '+ em(767) + ')';
+$brk-point-custom-medium:  'screen and (min-width: '+ em(989) + ')';
+$brk-point-large:   'screen and (min-width: ' + em(1023) + ')';

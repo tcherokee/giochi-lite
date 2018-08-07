@@ -1,0 +1,24 @@
+@import 'base/_functions';
+@import 'base/_variables';
+@import 'base/_mixins';
+@import 'base/_placeholders';
+@import 'base/_animations';
+@import 'base/_normalize';
+@import 'base/_base';
+
+
+@import 'layout/_header';
+@import 'layout/_main';
+@import 'layout/_casino-page';
+@import 'layout/_footer';
+
+@import 'modules/_navigation';
+@import 'modules/_search';
+@import 'modules/_sidebar-cards';
+@import 'modules/_ratings';
+@import 'modules/_responsive-table';
+@import 'modules/_casino-btns';
+@import 'modules/_casino-bonus-card';
+@import 'modules/_testimonials';
+@import 'modules/_casino-sidebar';
+@import 'modules/_sticky-header';

@@ -1,0 +1,22 @@
+@import 'base/_functions';
+@import 'base/_variables';
+@import 'base/_mixins';
+@import 'base/_placeholders';
+@import 'base/_normalize';
+@import 'base/_base';
+
+
+@import 'layout/_header';
+@import 'layout/_main';
+@import 'layout/_footer';
+
+@import 'modules/_navigation';
+@import 'modules/_search';
+@import 'modules/_game-cards';
+@import 'modules/_featured-card';
+@import 'modules/_sidebar-cards';
+@import 'modules/_ratings';
+@import 'modules/_slider';
+@import 'modules/_news-slider';
+@import 'modules/_homepage-btns';
+@import 'modules/_responsive-table';

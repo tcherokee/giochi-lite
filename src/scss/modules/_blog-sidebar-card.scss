@@ -1,0 +1,32 @@
+main.blog-index-page,
+main.blog-page {
+  .row {
+    .sidebar-section {
+      max-width: em(350);
+
+      .card {
+        border: 1px solid $light-grey;
+        margin-bottom: em(20);
+
+        a {
+          display: block;
+          text-decoration: none;
+
+          .content-box {
+            padding: em(10);
+            margin: 0;
+
+            h3 {
+              color: $alternate-color;
+              text-align: center;
+            }
+
+            p {
+              color: $medium-grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}

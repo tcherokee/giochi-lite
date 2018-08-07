@@ -1,0 +1,32 @@
+main.blog-page {
+  .row {
+    .main-section {
+      .card {
+        header {
+          h1 {
+            text-align: center;
+          }
+        }
+
+        aside {
+          @extend %blog-meta;
+          padding: 0;
+          margin-bottom: em(20);
+        }
+
+        .social {
+          text-align: center;
+          padding: em(10) 0;
+          border-top: 1px solid $light-grey;
+          border-bottom: 1px solid $light-grey;
+        }
+
+        .content-box {
+          p {
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+aside.search {
+  .aa-input-container {
+    position: relative;
+    width: 100%;
+
+    span.algolia-autocomplete {
+      display: block !important;
+
+      input {
+        width: 100%;
+        padding: em(12) em(28) em(12) em(12);
+        border: em(2) solid $medium-grey;
+        box-sizing: border-box;
+        color: $dark-grey;
+      }
+
+      &::after {
+        display: block;
+        content: url("../images/icons/search.svg") no-repeat;
+        width: em(15);
+        height: em(15);
+      }
+
+      .aa-dropdown-menu {
+        position: absolute;
+        width: 100%;
+        background: $medium-grey;
+        padding: 0 em(8) 0 em(8);
+        z-index: 99;
+
+        .aa-suggestions {
+          display: flex !important;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          @include brkpnt(tablet){
+            justify-content: flex-start;
+          }
+
+          .aa-suggestion {
+            background: $white;
+            width: em(160);
+            margin: em(8) em(8) em(8) 0;
+            overflow: hidden;
+
+            a {
+              display: block;
+              text-decoration: none;
+              color: $medium-grey;
+
+              figure {
+                overflow: hidden;
+
+                img {
+                  transition: .5s;
+                }
+              }
+
+              .search-content {
+                padding: em(5);
+                text-align: center;
+
+                h4 {
+                  text-align: center;
+                }
+
+                span {
+                  display: block;
+                  font-size: em(12);
+                }
+
+                em {
+                  background: $yellow;
+                  border: 1px solid darken($yellow, 10%);
+                  padding: 2px;
+                  margin: 0 2px;
+                }
+              }
+
+              &:hover {
+                figure {
+                  img {
+                    transform: scale(1.1);
+                    transition: .5s;
+                  }
+                }
+              }
+            }
+
+            @include brkpnt(tablet) {
+              flex-wrap: nowrap;
+              justify-content: flex-start;
+              width: 180px;
+              margin: em(8) em(8) em(8) 0;
+            }
+          }
+        }
+
+        &::before {
+          content:"";
+          border-style: solid;
+          border-width: 0 em(10) em(10) em(10);
+          border-color: transparent transparent $medium-grey transparent;
+          position: absolute;
+          top: em(-10);
+          left: em(10);
+        }
+
+        aside.a-brand {
+          display: flex;
+          padding-bottom: em(10);
+          justify-content: center;
+
+          @include brkpnt(tablet) {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}

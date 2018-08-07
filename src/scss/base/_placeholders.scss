@@ -1,0 +1,48 @@
+%ul-no-bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%tick-lists {
+  position: relative;
+  padding: 5px 10px 5px 25px;
+  line-height: 20px;
+  margin-left: 10px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: url("../images/tick.svg");
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+%inline-heading {
+  font-family: $stack-raleway;
+  font-size: em(18);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+%img-hover-bkg {
+  padding: 5px;
+  border: 1px solid $light-grey;
+  background-color: $white;
+  transition: background-color 1s;
+
+  &:hover {
+    background-color: $alternate-color;
+    transition: background-color 1s;
+  }
+}
+
+%blog-meta {
+  padding: em(10);
+  font-size: em(14);
+  text-align: center;
+}

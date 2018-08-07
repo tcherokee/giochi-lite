@@ -1,0 +1,79 @@
+main.casino-list-page {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    border: 1px solid $light-grey;
+    margin: 0 30px 30px 0;
+    max-width: em(300);
+    overflow: hidden;
+
+    & > * {
+      display: flex;
+    }
+
+    header {
+      background-color: $base-color;
+      justify-content: center;
+
+      h3 {
+        font-size: em(20);
+        padding: 15px 10px;
+        margin: 0;
+        color: $white;
+      }
+    }
+
+    & > p {
+      padding: em(10);
+    }
+
+    .bonus {
+      flex-direction: column;
+      padding: 20px;
+      background: lighten($light-grey, 15%);
+      border-top: 1px solid lighten($light-grey, 5%);
+      border-bottom: 1px solid lighten($light-grey, 5%);
+      align-items: center;
+
+      h4 {
+        color: $tertiary-color;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .bonus-meta {
+      padding: em(20);
+      background: lighten($light-grey, 15%);
+      border-bottom: 1px solid lighten($light-grey, 5%);
+
+      ul {
+        @extend %ul-no-bullets;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    .ratings {
+      padding:10px;
+      justify-content: center;
+    }
+
+    .btns {
+
+
+      .btn {
+        flex-grow: 1;
+        margin: 0;
+      }
+    }
+  }
+}

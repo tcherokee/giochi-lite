@@ -1,0 +1,38 @@
+main.blog-index-page {
+
+  .row {
+    .main-section {
+      flex-basis: em(890);
+
+      .card {
+        border: 1px solid $light-grey;
+        margin-bottom: em(20);
+
+
+        aside {
+          @extend %blog-meta;
+
+          background: $base-color;
+          color: $white;
+        }
+
+        .content-box {
+          margin: em(20);
+
+          header {
+            a {
+              display: block;
+              text-decoration: none;
+              text-align: center;
+            }
+          }
+        }
+
+        .btn {
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

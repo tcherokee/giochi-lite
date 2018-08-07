@@ -1,0 +1,38 @@
+main.container {
+  padding-bottom: 10px;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @include brkpnt(custom-desktop) {
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    .main-section {
+      position: relative;
+      flex-basis: 890px;
+
+      @include brkpnt(tablet) {
+        margin-right: em(10);
+      }
+    }
+
+    .sidebar-section {
+      position: relative;
+      max-width: 100%;
+
+      @include brkpnt(custom-desktop) {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .content-box {
+    margin: 20px 0;
+  }
+}

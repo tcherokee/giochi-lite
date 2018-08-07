@@ -1,0 +1,41 @@
+.testimonial {
+  position: relative;
+  padding: 10px 45px;
+  margin-top: 20px;
+  flex-direction: column;
+  text-align: right;
+
+  &::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: url(../images/icons/quote-left.svg);
+    width: 30px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    content: url(../images/icons/quote-right.svg);
+    width: 30px;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  span {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 20px;
+      top: 50%;
+      left: -25px;
+      border-bottom: 2px solid $medium-grey;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+span.ratings,
+div.ratings {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: text-bottom;
+
+  & > span {
+    display: inline-block;
+
+    svg {
+      width: em(25);
+      height: em(25);
+
+      .star {
+        &-empty {
+          stroke: $base-color;
+          stroke-width: 60px;
+
+          & + defs {
+            .color-stop-1,
+            .color-stop-2 {
+              stop-color: $white;
+            }
+          }
+        }
+
+        &-half,
+        &-quarter,
+        &-three-quarters {
+          stroke: $base-color;
+          stroke-width: 60px;
+
+          & + defs {
+            .color-stop-1 {
+              stop-color: $base-color;
+            }
+
+            .color-stop-2 {
+              stop-color: $white;
+            }
+          }
+        }
+
+        &-full {
+          fill: $base-color;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .sr-ratable {
+      .star-empty {
+        fill: $base-color;
+      }
+    }
+
+    .sr-ratable:hover ~ .sr-ratable .star-empty {
+      fill: $white;
+    }
+  }
+
+  .sr-user-rating {
+    .star-empty {
+      fill: $base-color;
+    }
+  }
+
+  .rating-value {
+    display: block;
+    font-size: em(14);
+    margin-top: em(10);
+  }
+}
+
+.ratings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @include brkpnt(tablet) {
+    flex-direction: row;
+  }
+
+  & > div {
+    text-align: center;
+    margin: em(5);
+
+    .rating-title {
+      @extend %inline-heading;
+    }
+  }
+
+  .user-ratings {
+    aside {
+      display: block;
+      font-size: em(11);
+    }
+  }
+}

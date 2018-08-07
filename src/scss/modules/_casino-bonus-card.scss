@@ -1,0 +1,87 @@
+main.casino-page {
+  .row {
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      flex-basis: em(820);
+      align-items: center;
+
+      .card {
+        display: flex;
+        border: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+
+        @include brkpnt(tablet) {
+          border:1px solid $light-grey;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+        }
+
+        .casino-website-bonus {
+          display: flex;
+          margin-bottom: em(10);
+
+          @include brkpnt(tablet) {
+            margin-bottom: 0;
+          }
+        }
+
+        .casino-bonus-list {
+          max-width: em(450);
+          padding: 10px 20px;
+          text-align: center;
+          border:1px solid $light-grey;
+          margin-bottom: em(10);
+
+          header {
+            a {
+              color: $base-color;
+              font-size: 20px;
+              text-transform: uppercase;
+              text-decoration: none;
+            }
+
+            margin-bottom: 10px;
+          }
+
+          ul {
+            @extend %ul-no-bullets;
+            align-self: flex-start;
+
+            li {
+              @extend %tick-lists;
+              margin-bottom: 5px;
+              text-align: left;
+            }
+          }
+
+          .casino-btn {
+            .btn {
+              width: 100%;
+            }
+          }
+
+          @include brkpnt(tablet) {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            border: none;
+            max-width: 100%;
+            margin-bottom: 0;
+
+            ul {
+              align-self: center;
+            }
+
+            .casino-btn {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

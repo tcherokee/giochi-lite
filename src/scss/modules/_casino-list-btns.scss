@@ -1,0 +1,7 @@
+.btn-base {
+	@include btnstyle($base-color, 0, $white);
+}
+
+.btn-alternate {
+	@include btnstyle($alternate-color, 0, $white);
+}
