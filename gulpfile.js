@@ -74,7 +74,8 @@ var gulp          = require('gulp'),
       return gulp.src([
                 'src/js/lazysizes.js',
                 'src/js/app.js',
-                'src/js/sticky-header.js'
+                'src/js/sticky-header.js',
+                'src/js/clickable-table-rows.js'
               ])
                  .pipe(maps.init())
                  .pipe(babel({

@@ -62,6 +62,10 @@
           background: none;
       }
 
+      &.clickable {
+        cursor: pointer;
+      }
+
       td {
         position: relative;
         display: block;

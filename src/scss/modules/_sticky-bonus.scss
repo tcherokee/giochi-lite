@@ -1,0 +1,79 @@
+.sticky-bonus {
+  display: none;
+  bottom: em(10);
+  right: em(10);
+  z-index: 2;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
+
+  &.visible {
+    display: block;
+    position: fixed;
+    animation: fadein 1s;
+  }
+
+  .sticky {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+
+    figure {
+      display: none;
+    }
+
+    .bonus {
+      display: none;
+    }
+
+    .btn {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include brkpnt(tablet) {
+    top: 0;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    background: $white;
+    border-radius: 0;
+    border-bottom: 1px solid $light-grey;
+
+    .sticky {
+      display: flex;
+      justify-content: space-between;
+
+      figure {
+        display: block;
+        max-width: 250px;
+      }
+
+      .bonus {
+        display: flex;
+        padding: 10px;
+        align-self: center;
+        font-size: 18px;
+        text-transform: uppercase;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn {
+        border-radius: 0;
+        padding:em(10) em(15);
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
