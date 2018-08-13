@@ -35,6 +35,13 @@
           }
         }
 
+        .social {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
         &:last-child {
           margin: em(10) em(10) em(10) 0;
           padding: 8px 0;

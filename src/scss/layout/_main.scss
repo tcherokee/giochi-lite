@@ -38,8 +38,55 @@ main.container {
   }
 
   .content-box.fader {
-    @extend %mobile-read-more;
-
+    max-height: em(220);
+    position: relative;
     overflow: hidden;
+
+    .mobile-read-more {
+      display: flex;
+      position: absolute;
+      height: 120px;
+      top: 115px;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.8) 38%, rgba(255,255,255,1) 40%);
+      justify-content: center;
+      align-items: flex-end;
+
+      @include brkpnt(tablet) {
+        display: none;
+      }
+
+      .btn {
+        position: absolute;
+        top: 65px;
+        font-size: 10px;
+        margin: em(5) 0;
+      }
+    }
+
+    &.short {
+      max-height: em(130);
+
+      .mobile-read-more {
+        height: em(200);
+        top: em(30);
+      }
+
+      @include brkpnt(tablet) {
+        max-height: 100%;
+      }
+    }
+
+    &.show {
+      max-height: 100%;
+
+      .mobile-read-more {
+        display: none;
+      }
+    }
+
+    @include brkpnt(tablet) {
+      max-height: 100%;
+    }
   }
 }
