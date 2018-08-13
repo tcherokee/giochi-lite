@@ -37,12 +37,21 @@ main.casino-list-page {
       border-bottom: 1px solid lighten($light-grey, 5%);
       align-items: center;
 
-      h4 {
-        color: $tertiary-color;
-      }
+      a {
+        text-decoration: none;
+        text-align: center;
 
-      p {
-        margin: 0;
+        h4 {
+          color: $tertiary-color;
+        }
+
+        span, p {
+          color: $medium-grey;
+        }
+
+        p {
+          margin: 0;
+        }
       }
     }
 
