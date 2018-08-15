@@ -1,17 +1,18 @@
 'use strict';
 
 var gulp          = require('gulp'),
-  concat        = require('gulp-concat'),
-  babel         = require('gulp-babel'),
-  uglify        = require('gulp-uglify'),
-  cleanCSS      = require('gulp-clean-css'),
-  gulpSequence  = require('gulp-sequence'),
-  rename        = require('gulp-rename'),
-  pump          = require('pump'),
-  htmlmin       = require('gulp-htmlmin'),
-  sass          = require('gulp-sass'),
-  maps          = require('gulp-sourcemaps'),
-  del           = require('del');
+    concat        = require('gulp-concat'),
+    babel         = require('gulp-babel'),
+    uglify        = require('gulp-uglify'),
+    cleanCSS      = require('gulp-clean-css'),
+    gulpSequence  = require('gulp-sequence'),
+    rename        = require('gulp-rename'),
+    pump          = require('pump'),
+    htmlmin       = require('gulp-htmlmin'),
+    sass          = require('gulp-sass'),
+    maps          = require('gulp-sourcemaps'),
+    del           = require('del'),
+    autoprefixer  = require('gulp-autoprefixer');
 
   gulp.task('cleanTasks', function(){
     return del('dist');
@@ -19,26 +20,35 @@ var gulp          = require('gulp'),
 
   gulp.task('compileSass', ['cleanTasks'], function(){
     return gulp.src('src/scss/*.scss')
-        .pipe(maps.init())
+          .pipe(maps.init())
           .pipe(sass())
           .pipe(maps.write('./'))
           .pipe(gulp.dest('dist/css'))
-    });
+  });
 
-    gulp.task('processCSS', ['compileSass'], function(){
-      gulp.src('dist/css/*.css')
-          .pipe(rename(function(path){
-              path.basename += ".min";
-          }))
-          .pipe(cleanCSS({
-              level: {
-                1: {
-                },
-                2: {
-                }
+  gulp.task('prefix', ['compileSass'], function(){
+    gulp.src('dist/css/*.css')
+        .pipe(autoprefixer({
+            browsers: ['last 99 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist/css'))
+  });
+
+  gulp.task('processCSS', ['prefix'], function(){
+    gulp.src('dist/css/*.css')
+        .pipe(rename(function(path){
+            path.basename += ".min";
+        }))
+        .pipe(cleanCSS({
+            level: {
+              1: {
+              },
+              2: {
               }
-            }))
-          .pipe(gulp.dest('dist/css'))
+            }
+          }))
+        .pipe(gulp.dest('dist/css'))
     });
 
     gulp.task('concatScriptsApp', function(){
