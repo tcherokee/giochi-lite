@@ -65,11 +65,28 @@ var gulp          = require('gulp'),
                  .pipe(gulp.dest('dist/js'))
     });
 
-    gulp.task('concatScriptsHome', ['concatScriptsApp'], function(){
+    gulp.task('concatScriptsGame', ['concatScriptsApp'], function(){
       return gulp.src([
                 'src/js/lazysizes.js',
                 'src/js/app.js',
-                'src/js/slider.js'
+                'src/js/modal.js',
+                'src/js/fullscreen.js'
+              ])
+                 .pipe(maps.init())
+                 .pipe(babel({
+                   presets: ['env']
+                 }))
+                 .pipe(concat('game.js'))
+                 .pipe(maps.write('./'))
+                 .pipe(gulp.dest('dist/js'))
+    });
+
+    gulp.task('concatScriptsHome', ['concatScriptsGame'], function(){
+      return gulp.src([
+                'src/js/lazysizes.js',
+                'src/js/app.js',
+                'src/js/slider.js',
+                'src/js/modal.js'
               ])
                  .pipe(maps.init())
                  .pipe(babel({

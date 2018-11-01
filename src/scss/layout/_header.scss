@@ -20,4 +20,9 @@ nav {
 
 aside.banner {
   padding: 10px 0;
+
+  a {
+    display: flex;
+    justify-content: center;
+  }
 }

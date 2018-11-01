@@ -1,23 +1,22 @@
 .games-container {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -10px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  margin-right: -5px;
 
   .game-card {
     display: flex;
     flex-direction: column;
     width: 185px;
     border: 1px solid $light-grey;
-    margin: 0 5px 5px 0;
+    margin: 0 em(5) em(5) 0;
     padding-bottom: em(10);
     align-items: center;
     justify-content: center;
 
     @include brkpnt(tablet) {
       width: 215px;
-      margin: 0 10px 10px 0;
     }
 
     .game-img {

@@ -1,12 +1,21 @@
 .news-slider {
   display: flex;
+  flex-wrap: wrap;
+
+  @include brkpnt(custom-tablet) {
+    flex-wrap: nowrap;
+  }
 
   ul {
     @extend %ul-no-bullets;
   }
 
   & > div {
-    width: 50%;
+    width: 100%;
+
+    @include brkpnt(custom-tablet) {
+      width: 50%;
+    }
 
      li {
 

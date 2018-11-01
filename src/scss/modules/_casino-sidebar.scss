@@ -12,11 +12,17 @@ main.casino-page {
           margin-top: 0;
         }
 
+        & > a {
+          display: flex;
+          justify-content: center;
+        }
+
         .casino-info {
           @extend %ul-no-bullets;
 
           display: flex;
           flex-direction: column;
+          max-width: em(310);
           border: 1px solid $light-grey;
           padding: 10px;
           justify-content: space-around;

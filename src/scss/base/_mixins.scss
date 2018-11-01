@@ -28,6 +28,12 @@
       @content;
     }
   }
+
+  @else if $device == large-desktop {
+    @media #{$brk-point-custom-large} {
+      @content;
+    }
+  }
 }
 
 @mixin btnstyle($bg, $radius, $color) {

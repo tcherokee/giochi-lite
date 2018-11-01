@@ -6,6 +6,7 @@ footer.container {
 
   @include brkpnt(tablet) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .footer-logo {
@@ -74,6 +75,10 @@ footer.container {
 
       li {
         margin-right: 10px;
+
+        a {
+          color: $light-grey;
+        }
       }
     }
   }

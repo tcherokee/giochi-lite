@@ -1,0 +1,43 @@
+legend {
+  text-align: center;
+  color: $base-color;
+  text-transform: uppercase;
+  font-family: $stack-raleway;
+  font-size: em(22);
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  font-size: em(18);
+  margin-left: em(5);
+  color: $alternate-color;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  width: 100%;
+  border: none;
+  font-size: em(16);
+  outline: 0;
+  padding: em(10);
+  margin-bottom: em(10);
+  background-color: $white;
+  color: $medium-grey;
+  border: 1px solid $light-grey;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  transition: background-color .5s ease-in-out;
+}
+
+.report-issue {
+  .btn {
+    width: 100%;
+  }
+}

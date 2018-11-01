@@ -5,14 +5,6 @@
   justify-content: center;
   align-items: center;
 
-  @include brkpnt(tablet) {
-    flex-wrap: nowrap;
-  }
-
-  @include brkpnt(custom-desktop) {
-    flex-wrap: wrap;
-  }
-
   &.featured {
     max-width: 350px;
 
@@ -22,6 +14,17 @@
 
     @include brkpnt(custom-desktop) {
       max-width: 250px;
+    }
+
+    & > h2 {
+      font-size: em(20);
+      text-align: center;
+      flex-basis: 100%;
+      margin-bottom: em(20);
+
+      @include brkpnt(custom-desktop) {
+        margin-bottom: em(0);
+      }
     }
 
     .featured-card {
@@ -36,48 +39,57 @@
         margin-right: 0;
       }
 
-      .feat-img {
-        width: 120px;
-        margin: 0 10px 0 0;
+      .feat-meta-container {
+        display: flex;
+        flex-direction: row;
 
         @include brkpnt(custom-desktop) {
-          width: 100%;
-          margin: 0;
+          flex-direction: column;
         }
 
-        img {
-          height: 90px;
+        .feat-img {
+          width: 120px;
+          margin: 0 10px 0 0;
 
           @include brkpnt(custom-desktop) {
-            height: auto;
+            width: 100%;
+            margin: 0;
+          }
+
+          img {
+            height: 90px;
+
+            @include brkpnt(custom-desktop) {
+              height: auto;
+            }
           }
         }
-      }
 
-      .feat-meta {
-        text-align: center;
-
-        h4 {
-          font-size: em(14);
-          font-weight: 500;
+        .feat-meta {
           text-align: center;
 
-          a {
-            text-decoration: none;
-            color: $medium-grey;
+          h4 {
+            font-size: em(14);
+            font-weight: 500;
+            text-align: center;
+
+            a {
+              text-decoration: none;
+              color: $medium-grey;
+            }
+
+            @include brkpnt(custom-desktop) {
+              padding: 10px 0;
+            }
           }
 
-          @include brkpnt(custom-desktop) {
-            padding: 10px 0;
-          }
-        }
+          & > span {
+            display: block;
 
-        & > span {
-          display: block;
-
-          @include brkpnt(custom-desktop) {
-            border-top: 1px solid $light-grey;
-            padding: 10px 0;
+            @include brkpnt(custom-desktop) {
+              border-top: 1px solid $light-grey;
+              padding: 10px 0;
+            }
           }
         }
       }

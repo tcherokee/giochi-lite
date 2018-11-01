@@ -87,7 +87,7 @@
         <span></span>
       </button>
     </nav>
-    <aside class="container search">
+    <!-- <aside class="container search">
       <div class="aa-input-container" id="aa-input-container">
         <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Cerca un gioco..." name="search" autocomplete="off" />
         <span class="aa-dropdown-menu">
@@ -167,7 +167,7 @@
           </div>
         </span>
       </div>
-    </aside>
+    </aside> -->
     <aside class="container banner">
       <img data-src="http://www.giochidislots.com/images/casino_images/27125_-_StarCasino_40k_tournament-1170x100-Italian_%281%29.gif" class="img-r" />
     </aside>
@@ -204,7 +204,7 @@
             </div>
 
             <div class="report-issue">
-              <a href="" class="btn btn-red">Segnala un problema</a>
+              <a href="" data-modal="modal-1" class="btn btn-red">Segnala un problema</a>
             </div>
           </div>
         </div>
@@ -217,7 +217,7 @@
         </div>
       </div>
       <div class="row btns">
-        <a href="#" class="btn btn-base">Tutto Schermo</a>
+        <a id="fullScreen" href="#" class="btn btn-base">Tutto Schermo</a>
         <a href="#" class="btn btn-alternate">Soldi Veri</a>
         <a href="#" class="btn btn-tertiary">Bonus Exclusivo</a>
       </div>
@@ -300,6 +300,40 @@
         </div>
       </div>
     </main>
+    
+    <aside id="modal-1" class="modal-bg">
+      <div class="modal-frame">
+        <div class="modal-container">
+          <div class="modal-content">
+            <form>
+              <fieldset>
+                <legend>Request an Appointment</legend>
+                <div class="container">
+                  <div class="form-column">
+                    <label>Full Name</label>
+                    <input type="text" id="fullname" placeholder="What is your Fullname" name="user_username" required>
+
+                    <label>Email Address</label>
+                    <input type="email" id="emailaddy" placeholder="Enter your email address" name="user_email" required>
+
+                    <label>Telephone</label>
+                    <input type="text" id="telephone" placeholder="What is your telephone number" name="user_telephone" required>
+                  </div>
+
+                  <div class="form-column">
+                    <label>Message</label>
+                    <textarea id="your_message" name="user_message" rows="4"></textarea>
+
+                    <button type="submit" class="btn btn-dark-blue">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <span class="close-icon"></span>
+        </div>
+      </div>
+    </aside>
 
     <footer class="container">
       <div class="footer-logo">
@@ -322,6 +356,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js"></script>
-    <script type="text/javascript" src="js/app.min.js"></script>
+    <script type="text/javascript" src="js/game.min.js"></script>
   </body>
 </html>

@@ -1,11 +1,12 @@
 main.casino-list-page {
   .row {
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .card {
     border: 1px solid $light-grey;
-    margin: 0 30px 30px 0;
+    margin: em(15);
     max-width: em(300);
     overflow: hidden;
 

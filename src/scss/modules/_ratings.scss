@@ -12,9 +12,16 @@ div.ratings {
       height: em(25);
 
       .star {
-        &-empty {
+        &-empty,
+        &-half,
+        &-quarter,
+        &-three-quarters,
+        &-full {
           stroke: $base-color;
           stroke-width: 60px;
+        }
+
+        &-empty {
 
           & + defs {
             .color-stop-1,
@@ -26,9 +33,7 @@ div.ratings {
 
         &-half,
         &-quarter,
-        &-three-quarters {
-          stroke: $base-color;
-          stroke-width: 60px;
+        &-three-quarters, {
 
           & + defs {
             .color-stop-1 {
@@ -50,18 +55,30 @@ div.ratings {
 
   &:hover {
     .sr-ratable {
-      .star-empty {
+      .star-empty,
+      .star-full,
+      .star-half,
+      .star-three-quarters,
+      .star-quarter {
         fill: $base-color;
       }
     }
 
-    .sr-ratable:hover ~ .sr-ratable .star-empty {
+    .sr-ratable:hover ~ .sr-ratable .star-empty,
+    .sr-ratable:hover ~ .sr-ratable .star-full,
+    .sr-ratable:hover ~ .sr-ratable .star-half,
+    .sr-ratable:hover ~ .sr-ratable .star-three-quarters,
+    .sr-ratable:hover ~ .sr-ratable .star-quarter {
       fill: $white;
     }
   }
 
   .sr-user-rating {
-    .star-empty {
+    .star-empty,
+    .star-full,
+    .star-half,
+    .star-three-quarters,
+    .star-quarter {
       fill: $base-color;
     }
   }

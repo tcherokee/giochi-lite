@@ -71,8 +71,8 @@ window.addEventListener("DOMContentLoaded", function(){
 
 
 //Algolia Search Implementation
-var client = algoliasearch('UPT1CAPJCZ', '20b100767eda52ffbf2bfe5860295de4');
-var index = client.initIndex('Craft');
+var client = algoliasearch('NSTGD2TLTL', '8bc61d26746e041327609f8a4d55d456');
+var index = client.initIndex(testIndex);
 
 autocomplete('#aa-search-input',
               {

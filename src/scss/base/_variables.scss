@@ -14,6 +14,7 @@ $misc-color: #01579B; /* Dark Blue */
 
 /* Background */
 $body-bkg-color: linear-gradient($misc-color, $white);
+$fader-color: $white;
 
 /*
   Font Stacks
@@ -33,3 +34,4 @@ $brk-point-custom-small:   'screen and (min-width: ' + em(498) + ')';
 $brk-point-medium:  'screen and (min-width: '+ em(767) + ')';
 $brk-point-custom-medium:  'screen and (min-width: '+ em(989) + ')';
 $brk-point-large:   'screen and (min-width: ' + em(1023) + ')';
+$brk-point-custom-large:   'screen and (min-width: ' + em(1200) + ')';

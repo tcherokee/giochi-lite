@@ -41,7 +41,8 @@ h4 {
 }
 
 p {
-  margin: 5px 0;
+  margin: 15px 0;
+  line-height: em(28);
 }
 
 figure {
@@ -56,10 +57,6 @@ figure {
   margin: 0 auto;
   padding: 0 em(10);
   background: $white;
-
-  @include brkpnt(tablet) {
-    flex-wrap: wrap;
-  }
 }
 
 a {
