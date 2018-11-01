@@ -11,8 +11,7 @@ var gulp          = require('gulp'),
     htmlmin       = require('gulp-htmlmin'),
     sass          = require('gulp-sass'),
     maps          = require('gulp-sourcemaps'),
-    del           = require('del'),
-    autoprefixer  = require('gulp-autoprefixer');
+    del           = require('del');
 
   gulp.task('cleanTasks', function(){
     return del('dist');
@@ -26,16 +25,7 @@ var gulp          = require('gulp'),
           .pipe(gulp.dest('dist/css'))
   });
 
-  gulp.task('prefix', ['compileSass'], function(){
-    gulp.src('dist/css/*.css')
-        .pipe(autoprefixer({
-            browsers: ['last 99 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist/css'))
-  });
-
-  gulp.task('processCSS', ['prefix'], function(){
+  gulp.task('processCSS', ['compileSass'], function(){
     gulp.src('dist/css/*.css')
         .pipe(rename(function(path){
             path.basename += ".min";
