@@ -151,5 +151,30 @@ main.casino-page {
         align-self: stretch;
       }
     }
+
+    .sidebar-section {
+      .sidebar {
+
+        small {
+          display: inline;
+
+          sup {
+            top: -2px;
+          }
+        }
+
+        .casino-info {
+          td:first-child {
+            text-transform: uppercase;
+            width: 120px;
+          }
+
+          td {
+            vertical-align: top;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
   }
 }

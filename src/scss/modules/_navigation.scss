@@ -13,7 +13,7 @@
   align-items: center;
 
   @include brkpnt(tablet) {
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   &.open {
@@ -43,9 +43,10 @@
 
         &::after {
           display: block;
-          content: url("../images/icons/caret-square-down.svg");
+          content: url("../images/icons/caret-square-down-dark.svg");
           width: 12px;
           height: 15px;
+          margin-left: 5px;
           transform: rotateX(0deg);
           transition: transform 1s;
           transform-origin: center;
@@ -67,6 +68,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      height: 100%;
     }
 
     ul {

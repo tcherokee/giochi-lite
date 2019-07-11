@@ -1,0 +1,100 @@
+.account-page {
+  .sidebar-section {
+    &.menu {
+      width: 100%;
+      margin-bottom: em(20);
+
+      header {
+        background: $medium-grey;
+        padding: em(10);
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include brkpnt(tablet) {
+          display: none;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @include brkpnt(tablet) {
+          flex-direction: row;
+
+          li {
+            flex-grow: 1;
+          }
+        }
+
+        @include brkpnt(custom-desktop) {
+          flex-direction: column;
+
+          li {
+            flex-grow: 0;
+          }
+        }
+
+        li {
+          a {
+            display: flex;
+            background: $light-grey;
+            border: $medium-grey;
+            text-decoration: none;
+            color: $medium-grey;
+            padding: em(10);
+
+            &:hover {
+              background: $dark-grey;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .mobile-btn {
+        top: em(5);
+
+        span {
+          background-color: $white;
+        }
+
+        &.open {
+          span {
+            &:nth-child(0n+2) {
+              background: transparent;
+              transition: 1s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-section {
+    padding-left: em(10);
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .games-container {
+      h2 {
+        flex-grow: 1;
+        width: 100%;
+        margin-bottom: em(10)
+      }
+
+      &:nth-child(2n) {
+        h2 {
+          margin-top: em(10);
+        }
+      }
+    }
+  }
+}

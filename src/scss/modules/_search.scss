@@ -9,7 +9,7 @@ aside.search {
       input {
         width: 100%;
         padding: em(12) em(28) em(12) em(12);
-        border: em(2) solid $medium-grey;
+        border: em(2) solid $search-border-color;
         box-sizing: border-box;
         color: $dark-grey;
       }
@@ -24,7 +24,7 @@ aside.search {
       .aa-dropdown-menu {
         position: absolute;
         width: 100%;
-        background: $medium-grey;
+        background: $search-bkg;
         padding: 0 em(8) 0 em(8);
         z-index: 99;
 

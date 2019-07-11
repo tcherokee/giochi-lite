@@ -6,24 +6,25 @@ $medium-grey: #546E7A;
 $dark-grey: #263238;
 $red: #F44336;
 $yellow: #FFDD40;
+$blue: #609cec;
 
-$base-color: #EF6C00; /* Orange */
-$alternate-color: #009688; /* Green */
-$tertiary-color: #00BCD4; /* Teal */
-$misc-color: #01579B; /* Dark Blue */
+$base-color: #E33258; /* Orange */
+$alternate-color: #B8AF03; /* Weird Green */
+$tertiary-color: #6FB1B8; /* Light Blue */
+$misc-color: #67917A; /* Stony Green */
 
 /* Background */
 $body-bkg-color: linear-gradient($misc-color, $white);
 $fader-color: $white;
 
 /* Footer BKG, Text Color & border */
-$footer-bkg: $dark-grey;
-$footer-txt-color: $light-grey;
-$footer-border-color: $black;
+$footer-bkg: $tertiary-color;
+$footer-txt-color: $white;
+$footer-border-color: $tertiary-color;
 
 /* Search Border & BKG */
-$search-border-color: $misc-color;
-$search-bkg: $white;
+$search-border-color: $tertiary-color;
+$search-bkg: $tertiary-color;
 
 /*
   Font Stacks

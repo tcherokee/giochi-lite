@@ -17,11 +17,11 @@ window.addEventListener("DOMContentLoaded", function(){
     }
   }
 
-  function menuDropdown(e) {
+  function menuDropdown(e, navItem) {
     let clickTarget = e.target;
     let clickParent = clickTarget.parentNode;
     let clickSibling = clickTarget.nextElementSibling;
-    let menuItems = mainNav.children;
+    let menuItems = navItem.children;
 
     if(clickParent.classList.contains("open")) {
 
@@ -38,18 +38,18 @@ window.addEventListener("DOMContentLoaded", function(){
     }
   }
 
-  function mobileBtnToggle(e) {
+  function mobileBtnToggle(e, navItem) {
     e.target.classList.toggle("open");
-    mainNav.classList.toggle("open");
+    navItem.classList.toggle("open");
   }
 
   document.addEventListener("click", function(e) {
     let isMainNavClick = mainNav.contains(e.target);
 
     if (isMainNavClick) {
-      menuDropdown(e);
+      menuDropdown(e, mainNav);
     } else if (e.target === mainNavMobileBtn) {
-      mobileBtnToggle(e)
+      mobileBtnToggle(e, mainNav)
     } else {
       removeSiblingsOpen(mainNav.children);
     }
@@ -59,11 +59,6 @@ window.addEventListener("DOMContentLoaded", function(){
     element.addEventListener("click", function(){
       let elementParent = this.parentNode.parentNode;
       elementParent.classList.toggle("show");
-      // if(elementParent.classList.contains("show")) {
-      //   element.innerHTML = "test";
-      // } else {
-      //   element.innerHTML = "tester";
-      // }
     })
   })
 })
@@ -82,7 +77,7 @@ autocomplete('#aa-search-input',
                 source:autocomplete.sources.hits(index, {hitsPerPage: 5}),
                 displayKey: 'title',
                 templates: {
-                  footer: '<aside class="a-brand"><img src="http://giochidislots.s3.amazonaws.com/misc_images/logo-algolia-nebula-blue.svg" class="img-r"/></aside>',
+                  footer: '<aside class="a-brand"><img src="https://giochidislots.s3.amazonaws.com/misc_images/logo-algolia-nebula-blue.svg" class="img-r"/></aside>',
                   suggestion: function(item) {
                     return '<a href="' +
                             item.url +

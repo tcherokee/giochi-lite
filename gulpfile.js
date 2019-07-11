@@ -103,7 +103,22 @@ var gulp          = require('gulp'),
                  .pipe(gulp.dest('dist/js'))
     });
 
-    gulp.task('compressJS', ['concatScriptsCasino'], function(err){
+    gulp.task('concatScriptsAccount', ['concatScriptsCasino'], function(){
+      return gulp.src([
+                'src/js/lazysizes.js',
+                'src/js/app.js',
+                'src/js/account.js'
+              ])
+                 .pipe(maps.init())
+                 .pipe(babel({
+                   presets: ['env']
+                 }))
+                 .pipe(concat('account.js'))
+                 .pipe(maps.write('./'))
+                 .pipe(gulp.dest('dist/js'))
+    });
+
+    gulp.task('compressJS', ['concatScriptsAccount'], function(err){
       pump([
         gulp.src('dist/js/*.js'),
         uglify(),
